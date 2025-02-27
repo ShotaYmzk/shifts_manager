@@ -1,5 +1,5 @@
 // app/layout.tsx
-import '../styles/globals.css';
+import '../src/app/globals.css';
 
 export default function RootLayout({
   children,
@@ -9,11 +9,10 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
-        <title>シフト管理アプリ</title>
+        <title>Shift Management App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
