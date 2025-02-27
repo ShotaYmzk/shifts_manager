@@ -4,3 +4,4 @@ export function getUserFromCookie(_cookie: string) {
   // クッキーからユーザー情報を取得する処理（実装例）
   return null;
 }
+
