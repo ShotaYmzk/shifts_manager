@@ -39,6 +39,7 @@ export function Calendar({
   const [currentMonth, setCurrentMonth] = useState<Date>(
     selected ? new Date(selected.getFullYear(), selected.getMonth()) : new Date(today.getFullYear(), today.getMonth())
   );
+  console.log('mode', mode);
 
   // Define header date format (e.g. "September 2023")
   const headerDateFormat = 'MMMM yyyy';

@@ -15,18 +15,14 @@ export default function LoginPage() {
     setError('');
     const res = await fetch('/api/auth', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password, type: 'login' })
     });
-
     const result = await res.json();
     if (!res.ok) {
       setError(result.error || 'ログインできません');
       return;
     }
-    // ログイン成功時にダッシュボードへ遷移する例
     router.push('/dashboard');
   };
 
@@ -60,7 +56,7 @@ export default function LoginPage() {
           <button type="submit">Login</button>
         </form>
         <p>
-          Don't have an account? <Link href="/register">Register</Link>
+          Don&apos;t have an account? <Link href="/register">Register</Link>
         </p>
       </div>
     </div>

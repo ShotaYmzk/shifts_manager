@@ -1,4 +1,5 @@
 // app/dashboard/page.tsx
+'use client';
 import Header from '../../components/layout/Header';
 import Sidebar from '../../components/layout/Sidebar';
 import Footer from '../../components/layout/Footer';
@@ -16,11 +17,11 @@ export interface Shift {
   end_time: string;
 }
 
-// any 型の使用例を、Shift 型を利用するように変更
-const processShifts = (shifts: Shift[]): Shift[] => {
-  // シフト情報の加工処理（必要に応じて実装）
-  return shifts;
-};
+// // any 型の使用例を、Shift 型を利用するように変更
+// const processShifts = (shifts: Shift[]): Shift[] => {
+//   // シフト情報の加工処理（必要に応じて実装）
+//   return shifts;
+// };
 
 export default function UserDashboard() {
   return (

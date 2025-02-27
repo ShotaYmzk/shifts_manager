@@ -15,14 +15,12 @@ export default function RegisterPage() {
     e.preventDefault();
     setError('');
 
-    // パスワードが一致しているか確認
     if (password !== confirmPassword) {
       setError('パスワードが一致しません');
       return;
     }
 
     try {
-      // JSON形式でAPIにリクエストを送信
       const res = await fetch('/api/auth', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -34,9 +32,9 @@ export default function RegisterPage() {
         setError(result.error || '登録に失敗しました');
         return;
       }
-      // 登録成功時はダッシュボード（またはログインページ）へ遷移
       router.push('/dashboard');
     } catch (err) {
+      console.error(err);
       setError('登録中にエラーが発生しました');
     }
   };
